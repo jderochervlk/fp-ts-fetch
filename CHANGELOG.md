@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/jderochervlk/fp-ts-fetch/compare/v1.0.0...v1.1.0) (2022-11-07)
+
+
+### Features
+
+* improve readme and add io-ts unit tests ([7a3fb1f](https://github.com/jderochervlk/fp-ts-fetch/commit/7a3fb1f213ab6c96a1e0d14baf35fd20209984ba))
+
 # 1.0.0 (2022-11-07)
 
 
