@@ -1,3 +1,17 @@
+# 1.0.0 (2022-11-07)
+
+
+### Bug Fixes
+
+* correct urls in package.json ([b11ff38](https://github.com/jderochervlk/fp-ts-fetch/commit/b11ff383abf023bc4cef4a8b34c4d9af4c3e89ba))
+
+
+### Features
+
+* mark as alpha ([c4ee86b](https://github.com/jderochervlk/fp-ts-fetch/commit/c4ee86b85bd804129bd7f8a252fbd165c2dca8f5))
+* safeFetch ([102b329](https://github.com/jderochervlk/fp-ts-fetch/commit/102b32906dc1f8324f6dc4b57ee0a51f0dbff316))
+* safeFetchJson ([5cbda1b](https://github.com/jderochervlk/fp-ts-fetch/commit/5cbda1bbe8af10ce8660e03bf269922ea7f22de0))
+
 # 1.0.0 (2022-11-04)
 
 

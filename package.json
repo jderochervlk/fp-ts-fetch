@@ -1,6 +1,6 @@
 {
   "name": "@jvlk/fp-ts-fetch",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0",
   "description": "An fp-ts library to make it easy to work with fetch requests.",
   "source": "src/index.ts",
   "main": "dist/index.js",
