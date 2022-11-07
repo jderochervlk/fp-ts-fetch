@@ -5,7 +5,8 @@ export default {
   coverageProvider: "v8",
   collectCoverageFrom: [
     "./src/**/*",
-    "!./src/mocks/*"
+    "!./src/mocks/*",
+    "!./src/index.ts"
   ],
   testEnvironment: 'jsdom',
   transform: {
