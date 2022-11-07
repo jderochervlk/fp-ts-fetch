@@ -1,4 +1,9 @@
+import * as E from 'fp-ts/lib/Either'
 import { isLeft, left, right } from 'fp-ts/lib/Either'
+import { flow, pipe } from 'fp-ts/lib/function'
+import * as TE from 'fp-ts/lib/TaskEither'
+import * as t from 'io-ts'
+import { PathReporter } from 'io-ts/lib/PathReporter'
 import safeFetchJson from './safeFetchJson'
 
 test('handles 200 success', async () => {
@@ -19,5 +24,35 @@ test('handles 200 response with bad JSON', async () => {
         'failed to parse response JSON: SyntaxError: Unexpected token T in JSON at position 0'
       )
     )
+  )
+})
+
+test('with io-ts', async () => {
+  const parse = t.type({ foo: t.string }, 'api response')
+
+  type R = t.TypeOf<typeof parse>
+
+  const results = await pipe(
+    safeFetchJson<R>('www.api.com/200'),
+    TE.chainW(flow(parse.decode, TE.fromEither))
+  )()
+
+  expect(results).toEqual(right({ foo: 'bar' }))
+
+  const badResults = await pipe(
+    safeFetchJson<R>('www.api.com/200/alt'),
+    TE.map(parse.decode)
+  )()
+
+  pipe(
+    badResults,
+    E.fold(
+      (e) => [],
+      (x) => PathReporter.report(x)
+    ),
+    (x) =>
+      expect(x).toEqual([
+        'Invalid value undefined supplied to : api response/foo: string',
+      ])
   )
 })
