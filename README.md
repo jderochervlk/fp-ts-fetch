@@ -1,2 +1,3 @@
-# fp-ts-fetch
-HTTP fetch wrappers for fp-ts
+# @jvlk/fp-ts-fetch
+
+Fetch wrappers for `fp-ts`.
