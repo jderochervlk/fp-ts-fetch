@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/jderochervlk/fp-ts-fetch/compare/v1.1.0...v1.1.1) (2022-11-08)
+
+
+### Bug Fixes
+
+* remove lib from fp-ts imports ([798900b](https://github.com/jderochervlk/fp-ts-fetch/commit/798900bf1b33c3860a8c8ec1309b4e8c21264fad))
+
 # [1.1.0](https://github.com/jderochervlk/fp-ts-fetch/compare/v1.0.0...v1.1.0) (2022-11-07)
 
 
