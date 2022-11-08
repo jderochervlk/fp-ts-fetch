@@ -2,8 +2,8 @@
  * @since 1.0.0
  */
 
-import { pipe } from 'fp-ts/lib/function'
-import { tryCatch, chainW, right, left } from 'fp-ts/lib/TaskEither'
+import { pipe } from 'fp-ts/function'
+import { tryCatch, chainW, right, left } from 'fp-ts/TaskEither'
 
 /**
  * Wraps `fetch` in a `TaskEither.tryCatch`.

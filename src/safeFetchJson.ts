@@ -2,9 +2,9 @@
  * @since 1.1.0
  */
 
-import { pipe } from 'fp-ts/lib/function'
+import { pipe } from 'fp-ts/function'
 import safeFetch from './safeFetch'
-import { tryCatch, chainW, right, left } from 'fp-ts/lib/TaskEither'
+import { tryCatch, chainW, right, left } from 'fp-ts/TaskEither'
 
 /**
  * Safely fetch and attempt to parse the responses json.
