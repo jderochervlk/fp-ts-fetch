@@ -57,7 +57,7 @@
     "msw": "^1.1.0",
     "parcel": "^2.7.0",
     "prettier": "^2.7.1",
-    "semantic-release": "^19.0.5",
+    "semantic-release": "^21.0.2",
     "whatwg-fetch": "^3.6.2"
   },
   "peerDependencies": {
