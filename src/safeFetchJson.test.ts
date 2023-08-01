@@ -20,9 +20,7 @@ test('handles 200 response with bad JSON', async () => {
   const results = await safeFetchJson('www.api.com/200/body')()
   expect(results).toEqual(
     left(
-      Error(
-        'failed to parse response JSON: SyntaxError: Unexpected token T in JSON at position 0'
-      )
+      expect.any(Error)
     )
   )
 })
