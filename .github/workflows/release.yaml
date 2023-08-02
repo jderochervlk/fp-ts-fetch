@@ -20,6 +20,8 @@ jobs:
           cache: 'npm'
       - name: Install
         run: npm install
+      - name: Unit tests
+        run: npm run test
       - name: Build
         run: npm run build
       - name: Release
