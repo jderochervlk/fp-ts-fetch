@@ -2,10 +2,18 @@
 
 Fetch wrappers for `fp-ts`.
 
-## Example
+## Examples
 ```ts
-import { safeFetchJson } from '@jvlk/fp-ts/fetch'
-import * as t from 'io-ts'
+// safeFetch
+import { safeFetch } from '@jvlk/fp-ts-fetch'
+
+safeFetch('testing.com')
+```
+
+```ts
+import { safeFetchJson } from '@jvlk/fp-ts-fetch'
+
+safeFetchJson('api.com')() // => Either<Error, T>
 
 ```
 
