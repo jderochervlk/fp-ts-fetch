@@ -1,6 +1,4 @@
-import 'whatwg-fetch'
-
-import { server } from './src/mocks/server'
+import { server } from './src/mocks/server.mjs'
 
 beforeAll(() => server.listen())
 afterEach(() => server.resetHandlers())
