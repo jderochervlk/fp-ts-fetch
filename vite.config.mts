@@ -10,13 +10,12 @@ export default defineConfig({
     build: {
         lib: {
             entry: './src/index.mts',
-            name: 'index',
+            fileName: 'index',
             formats: ['es', 'cjs'],
         },
         rollupOptions: {
-            external: [/fp-ts\/lib/]
+            external: [/fp-ts\/lib/],
         },
-        
     },
     test: {
         globals: true,

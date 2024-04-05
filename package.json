@@ -2,10 +2,13 @@
   "name": "@jvlk/fp-ts-fetch",
   "version": "1.1.1",
   "description": "An fp-ts library to make it easy to work with fetch requests.",
-  "source": "src/index.mts",
-  "main": "dist/index.js",
-  "module": "dist/module.js",
-  "types": "dist/types.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.mts"
+    }
+  },
   "scripts": {
     "build": "vite build",
     "docs": "docs-ts",
