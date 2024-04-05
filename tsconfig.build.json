@@ -1,0 +1,9 @@
+{
+    "extends": "./tsconfig.json",
+    "include": ["src/**.mts"],
+    "exclude": ["src/*.test.mts", "src/mocks", "test.setup.mts"],
+    "compilerOptions": {
+        "rootDir": "src",
+        "composite": true,
+    }
+}

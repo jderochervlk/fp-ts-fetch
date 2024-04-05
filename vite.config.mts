@@ -4,7 +4,9 @@ import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
-    plugins: [dts()],
+    plugins: [dts({
+        tsconfigPath: './tsconfig.build.json',
+    })],
     build: {
         lib: {
             entry: './src/index.mts',
@@ -19,5 +21,8 @@ export default defineConfig({
     test: {
         globals: true,
         setupFiles: ['./test.setup.mts'],
+        typecheck: {
+            tsconfig: './tsconfig.test.json'
+        }
     }
 });
