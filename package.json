@@ -12,7 +12,7 @@
     "format": "prettier -w src",
     "prepare": "husky install",
     "test": "vitest run",
-    "test:watch": "vitest",
+    "test:watch": "vitest --ui",
     "tsc": "tsc",
     "semantic-release": "semantic-release"
   },
@@ -45,6 +45,7 @@
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
+    "@vitest/ui": "^1.4.0",
     "docs-ts": "^0.8.0",
     "husky": "^8.0.0",
     "io-ts": "^2.2.19",
