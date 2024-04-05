@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "noEmit": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
     "lib": ["ES2022", "DOM"]
   },
-  "include": ["src/*.ts"]
+  "include": ["src/*.ts", "src/index.mts", "src/safeFetch.mts", "src/safeFetchJson.mts", "src/safeFetchJson.test.mts", "src/safeFetch.test.mts"]
 }

@@ -1,10 +1,10 @@
-import * as E from 'fp-ts/Either'
-import { isLeft, left, right } from 'fp-ts/Either'
-import { flow, pipe } from 'fp-ts/function'
-import * as TE from 'fp-ts/TaskEither'
+import * as E from 'fp-ts/lib/Either.js'
+import { isLeft, left, right } from 'fp-ts/lib/Either.js'
+import { flow, pipe } from 'fp-ts/lib/function.js'
+import * as TE from 'fp-ts/lib/TaskEither.js'
 import * as t from 'io-ts'
 import { PathReporter } from 'io-ts/PathReporter'
-import safeFetchJson from './safeFetchJson'
+import safeFetchJson from './safeFetchJson.mjs'
 
 test('handles 200 success', async () => {
   const results = await safeFetchJson<{ foo: string }>('www.api.com/200')()

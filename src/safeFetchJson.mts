@@ -2,9 +2,9 @@
  * @since 1.1.0
  */
 
-import { pipe } from 'fp-ts/function'
-import safeFetch, { FetchError, ServerError } from './safeFetch'
-import { tryCatch, chainW, TaskEither } from 'fp-ts/TaskEither'
+import { pipe } from 'fp-ts/lib/function.js'
+import safeFetch, { FetchError, ServerError } from './safeFetch.mjs'
+import { tryCatch, chainW, TaskEither } from 'fp-ts/lib/TaskEither.js'
 
 /**
  * @since 1.2.0

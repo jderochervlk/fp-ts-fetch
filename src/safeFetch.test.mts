@@ -1,4 +1,4 @@
-import safeFetch from './safeFetch'
+import safeFetch from './safeFetch.mjs'
 import * as E from 'fp-ts/Either'
 
 test('can get a 200 response', (done) => {
