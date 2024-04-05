@@ -1,10 +1,10 @@
 {
-    "extends": "./tsconfig.json",
-    "include": ["src/**/*.mts", "src/*.mts", "test.setup.mts"],
-    "exclude": ["tsc/**/*", "node_modules", "dist"],
-    "compilerOptions": {
-        "types": ["vitest/globals"],
-        "composite": true,
-        "emitDeclarationOnly": true
-    }
+	"extends": "./tsconfig.json",
+	"include": ["src/**/*.mts", "src/*.mts", "test.setup.mts"],
+	"exclude": ["tsc/**/*", "node_modules", "dist"],
+	"compilerOptions": {
+		"types": ["vitest/globals"],
+		"composite": true,
+		"emitDeclarationOnly": true
+	}
 }

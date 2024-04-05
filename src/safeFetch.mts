@@ -2,22 +2,28 @@
  * @since 1.0.0
  */
 
-import { pipe } from 'fp-ts/lib/function.js'
-import { tryCatch, chainW, right, left, TaskEither } from 'fp-ts/lib/TaskEither.js'
+import {
+	type TaskEither,
+	chainW,
+	left,
+	right,
+	tryCatch,
+} from "fp-ts/lib/TaskEither.js";
+import { pipe } from "fp-ts/lib/function.js";
 
 /**
  * @since 1.2.0
- * 
+ *
  * A server error response with a `status` and `statusText`.
  */
-export type ServerError = Response
+export type ServerError = Response;
 
 /**
  * @since 1.2.0
- * 
+ *
  * Something went wrong with the fetch request and was unable to reach the server.
  */
-export type FetchError = Error
+export type FetchError = Error;
 
 /**
  * Wraps `fetch` in a `TaskEither.tryCatch`.
@@ -30,14 +36,14 @@ export type FetchError = Error
  * @since 1.0.0
  */
 export default function safeFetch(
-  input: RequestInfo | URL,
-  init?: RequestInit | undefined
+	input: RequestInfo | URL,
+	init?: RequestInit | undefined,
 ): TaskEither<ServerError | FetchError, Response> {
-  return pipe(
-    tryCatch(
-      () => fetch(input, init),
-      (e) => Error(`fetch failed: ${e}`)
-    ),
-    chainW((res) => (res.ok ? right(res) : left(res)))
-  )
+	return pipe(
+		tryCatch(
+			() => fetch(input, init),
+			(e) => Error(`fetch failed: ${e}`),
+		),
+		chainW((res) => (res.ok ? right(res) : left(res))),
+	);
 }

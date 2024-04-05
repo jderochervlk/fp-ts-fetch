@@ -1,3 +1,3 @@
-import { safeFetchJson } from '../../src'
+import { safeFetchJson } from "../../src";
 
-safeFetchJson('api.com')() // => Either<Error, T>
+safeFetchJson("api.com")(); // => Either<Error, T>

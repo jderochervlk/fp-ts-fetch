@@ -1,66 +1,59 @@
 {
-  "name": "@jvlk/fp-ts-fetch",
-  "version": "1.1.1",
-  "description": "An fp-ts library to make it easy to work with fetch requests.",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.mts"
-    }
-  },
-  "scripts": {
-    "build": "vite build",
-    "docs": "docs-ts",
-    "format": "prettier -w src",
-    "prepare": "husky install",
-    "test": "vitest run",
-    "test:watch": "vitest --ui",
-    "tsc": "tsc",
-    "semantic-release": "semantic-release"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jderochervlk/fp-ts-fetch.git"
-  },
-  "keywords": [
-    "fp-ts",
-    "fetch",
-    "functional programming",
-    "typescript",
-    "fp"
-  ],
-  "author": "Josh Vlk",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jderochervlk/fp-ts-fetch/issues"
-  },
-  "homepage": "https://github.com/jderochervlk/fp-ts-fetch#readme",
-  "dependencies": {
-    "fp-ts": "^2.13.1",
-    "typescript": "^4.8.4",
-    "vite-plugin-dts": "^3.8.1"
-  },
-  "devDependencies": {
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/exec": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^9.0.1",
-    "@semantic-release/release-notes-generator": "^10.0.3",
-    "@vitest/ui": "^1.4.0",
-    "docs-ts": "^0.8.0",
-    "husky": "^8.0.0",
-    "io-ts": "^2.2.19",
-    "msw": "^1.1.0",
-    "prettier": "^2.7.1",
-    "semantic-release": "^22.0.5",
-    "vite": "^5.2.8",
-    "vitest": "^1.4.0",
-    "whatwg-fetch": "^3.6.2"
-  },
-  "peerDependencies": {
-    "fp-ts": "^2.13.1",
-    "typescript": "^4.8.4"
-  }
+	"name": "@jvlk/fp-ts-fetch",
+	"version": "1.2.0-rc.6",
+	"description": "An fp-ts library to make it easy to work with fetch requests.",
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js",
+			"types": "./dist/index.d.mts"
+		}
+	},
+	"scripts": {
+		"build": "vite build",
+		"docs": "docs-ts",
+		"format": "prettier -w src",
+		"prepare": "husky install",
+		"test": "vitest run",
+		"test:watch": "vitest --ui",
+		"tsc": "tsc",
+		"semantic-release": "semantic-release"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jderochervlk/fp-ts-fetch.git"
+	},
+	"keywords": ["fp-ts", "fetch", "functional programming", "typescript", "fp"],
+	"author": "Josh Vlk",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/jderochervlk/fp-ts-fetch/issues"
+	},
+	"homepage": "https://github.com/jderochervlk/fp-ts-fetch#readme",
+	"dependencies": {
+		"fp-ts": "^2.13.1",
+		"typescript": "^4.8.4",
+		"vite-plugin-dts": "^3.8.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.6.4",
+		"@semantic-release/changelog": "^6.0.1",
+		"@semantic-release/commit-analyzer": "^9.0.2",
+		"@semantic-release/exec": "^6.0.3",
+		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/npm": "^9.0.1",
+		"@semantic-release/release-notes-generator": "^10.0.3",
+		"@vitest/ui": "^1.4.0",
+		"docs-ts": "^0.8.0",
+		"husky": "^8.0.0",
+		"io-ts": "^2.2.19",
+		"msw": "^1.1.0",
+		"semantic-release": "^22.0.5",
+		"vite": "^5.2.8",
+		"vitest": "^1.4.0"
+	},
+	"peerDependencies": {
+		"fp-ts": "^2.13.1",
+		"typescript": "^4.8.4"
+	}
 }

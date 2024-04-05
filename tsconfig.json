@@ -1,27 +1,24 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "esModuleInterop": false,
-    "emitDeclarationOnly": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "lib": ["ES2022", "DOM"],
-    "outDir": "tsc",
-    "composite": true
-  },
-  "include": [
-    "*.mts",
-    "**/*.mts",
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.build.json"
-    },
-    {
-      "path": "./tsconfig.test.json"
-    }
-  ]
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"esModuleInterop": false,
+		"emitDeclarationOnly": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"lib": ["ES2022", "DOM"],
+		"outDir": "tsc",
+		"composite": true
+	},
+	"include": ["*.mts", "**/*.mts"],
+	"references": [
+		{
+			"path": "./tsconfig.build.json"
+		},
+		{
+			"path": "./tsconfig.test.json"
+		}
+	]
 }

@@ -1,3 +1,3 @@
-import { safeFetch } from '../../src'
+import { safeFetch } from "../../src";
 
-safeFetch('testing.com')
+safeFetch("testing.com");

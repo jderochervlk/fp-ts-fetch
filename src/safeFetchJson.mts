@@ -2,16 +2,16 @@
  * @since 1.1.0
  */
 
-import { pipe } from 'fp-ts/lib/function.js'
-import safeFetch, { FetchError, ServerError } from './safeFetch.mjs'
-import { tryCatch, chainW, TaskEither } from 'fp-ts/lib/TaskEither.js'
+import { type TaskEither, chainW, tryCatch } from "fp-ts/lib/TaskEither.js";
+import { pipe } from "fp-ts/lib/function.js";
+import safeFetch, { type FetchError, type ServerError } from "./safeFetch.mjs";
 
 /**
  * @since 1.2.0
- * 
+ *
  * The JSON returned from the server is invalid.
  */
-export type JsonError = Error
+export type JsonError = Error;
 
 /**
  * Safely fetch and attempt to parse the responses json.
@@ -24,16 +24,16 @@ export type JsonError = Error
  * @since 1.1.0
  */
 export default function safeFetchJson<T>(
-  input: RequestInfo | URL,
-  init?: RequestInit | undefined
+	input: RequestInfo | URL,
+	init?: RequestInit | undefined,
 ): TaskEither<ServerError | FetchError | JsonError, T> {
-  return pipe(
-    safeFetch(input, init),
-    chainW((res) =>
-      tryCatch<Error, T>(
-        () => res.json(),
-        (e) => Error(`failed to parse response JSON: ${e}`)
-      )
-    )
-  )
+	return pipe(
+		safeFetch(input, init),
+		chainW((res) =>
+			tryCatch<Error, T>(
+				() => res.json(),
+				(e) => Error(`failed to parse response JSON: ${e}`),
+			),
+		),
+	);
 }
