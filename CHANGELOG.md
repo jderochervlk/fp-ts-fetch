@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/jderochervlk/fp-ts-fetch/compare/v1.2.0...v1.3.0) (2024-04-08)
+
+
+### Features
+
+* remove Error from possible response type ([#88](https://github.com/jderochervlk/fp-ts-fetch/issues/88)) ([bb8057f](https://github.com/jderochervlk/fp-ts-fetch/commit/bb8057f5090851646255f32090ba5cd4a5394044))
+
 # [1.2.0](https://github.com/jderochervlk/fp-ts-fetch/compare/v1.1.1...v1.2.0) (2024-04-08)
 
 
