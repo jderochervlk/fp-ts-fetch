@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/jderochervlk/fp-ts-fetch/compare/v1.1.1...v1.2.0) (2024-04-08)
+
+
+### Features
+
+* Add ESM support ([#87](https://github.com/jderochervlk/fp-ts-fetch/issues/87)) ([6b50faf](https://github.com/jderochervlk/fp-ts-fetch/commit/6b50fafe0c92257d08613413d278417d6f63093c))
+* improve error types ([#45](https://github.com/jderochervlk/fp-ts-fetch/issues/45)) ([502ad71](https://github.com/jderochervlk/fp-ts-fetch/commit/502ad71b72f1083c2827d9d77a554c6dc813b002))
+
 ## [1.1.1](https://github.com/jderochervlk/fp-ts-fetch/compare/v1.1.0...v1.1.1) (2022-11-08)
 
 
