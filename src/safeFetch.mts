@@ -19,13 +19,6 @@ import { pipe } from "fp-ts/lib/function.js";
 export type ServerError = Response;
 
 /**
- * @since 1.2.0
- *
- * Something went wrong with the fetch request and was unable to reach the server.
- */
-export type FetchError = Error;
-
-/**
  * Wraps `fetch` in a `TaskEither.tryCatch`.
  *
  * @example
@@ -38,11 +31,15 @@ export type FetchError = Error;
 export default function safeFetch(
 	input: RequestInfo | URL,
 	init?: RequestInit | undefined,
-): TaskEither<ServerError | FetchError, Response> {
+): TaskEither<ServerError, Response> {
 	return pipe(
 		tryCatch(
 			() => fetch(input, init),
-			(e) => Error(`fetch failed: ${e}`),
+			(e) =>
+				new Response(`fetch failed: ${e}`, {
+					status: 0,
+					statusText: `fetch failed: ${e}`,
+				}),
 		),
 		chainW((res) => (res.ok ? right(res) : left(res))),
 	);
