@@ -44,7 +44,7 @@
 		"@semantic-release/git": "^10.0.1",
 		"@semantic-release/npm": "^9.0.1",
 		"@semantic-release/release-notes-generator": "^10.0.3",
-		"@vitest/ui": "^1.4.0",
+		"@vitest/ui": "^3.1.2",
 		"docs-ts": "^0.7.0",
 		"husky": "^9.1.7",
 		"io-ts": "^2.2.19",
