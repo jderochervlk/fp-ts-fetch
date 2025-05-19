@@ -49,7 +49,7 @@
 		"husky": "^9.1.7",
 		"io-ts": "^2.2.19",
 		"msw": "^1.1.0",
-		"semantic-release": "^23.0.7",
+		"semantic-release": "^24.2.4",
 		"vite": "^5.2.8",
 		"vitest": "^1.4.0"
 	},
