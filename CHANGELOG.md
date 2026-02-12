@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/jderochervlk/fp-ts-fetch/compare/v1.3.0...v1.3.1) (2026-02-12)
+
+
+### Bug Fixes
+
+* remove bad response code ([#144](https://github.com/jderochervlk/fp-ts-fetch/issues/144)) ([6d0bf30](https://github.com/jderochervlk/fp-ts-fetch/commit/6d0bf304c5d78fadea61e3db4dc3d879b40f660c))
+
 # [1.3.0](https://github.com/jderochervlk/fp-ts-fetch/compare/v1.2.0...v1.3.0) (2024-04-08)
 
 
