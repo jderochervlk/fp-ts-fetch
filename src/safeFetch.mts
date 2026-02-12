@@ -2,13 +2,8 @@
  * @since 1.0.0
  */
 
-import {
-	type TaskEither,
-	chainW,
-	left,
-	right,
-	tryCatch,
-} from "fp-ts/lib/TaskEither.js";
+import { left, right } from "fp-ts/lib/Either.js";
+import { type TaskEither, chainW, tryCatch } from "fp-ts/lib/TaskEither.js";
 import { pipe } from "fp-ts/lib/function.js";
 
 /**
@@ -19,7 +14,7 @@ import { pipe } from "fp-ts/lib/function.js";
 export type ServerError = Response;
 
 /**
- * Wraps `fetch` in a `TaskEither.tryCatch`.
+ * Calls `fetch` and returns `TaskEither<ServerError, Error>` depending on the value of `response.ok`.
  *
  * @example
  * import { safeFetch } from '@jvlk/fp-ts-fetch'
@@ -32,15 +27,10 @@ export default function safeFetch(
 	input: RequestInfo | URL,
 	init?: RequestInit | undefined,
 ): TaskEither<ServerError, Response> {
-	return pipe(
-		tryCatch(
-			() => fetch(input, init),
-			(e) =>
-				new Response(`fetch failed: ${e}`, {
-					status: 0,
-					statusText: `fetch failed: ${e}`,
-				}),
-		),
-		chainW((res) => (res.ok ? right(res) : left(res))),
-	);
+	return () =>
+		fetch(input, init).then((res) =>
+			res.ok
+				? right<ServerError, Response>(res)
+				: left<ServerError, Response>(res),
+		);
 }
