@@ -1,7 +1,4 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-npx @biomejs/biome check --apply .
+npm run format
 npm test
 # npm run docs TODO: new docs tool?
 git add -A .
