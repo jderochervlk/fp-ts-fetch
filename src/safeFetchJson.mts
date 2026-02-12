@@ -26,7 +26,7 @@ export type JsonError = SyntaxError;
 export default function safeFetchJson<T>(
 	input: RequestInfo | URL,
 	init?: RequestInit | undefined,
-): TaskEither<ServerError | JsonError, T> {
+): TaskEither<ServerError | JsonError | Error, T> {
 	return pipe(
 		safeFetch(input, init),
 		chainW((res) =>

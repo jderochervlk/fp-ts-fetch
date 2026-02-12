@@ -25,11 +25,13 @@ export type ServerError = Response;
 export default function safeFetch(
 	input: RequestInfo | URL,
 	init?: RequestInit | undefined,
-): TaskEither<ServerError, Response> {
+): TaskEither<ServerError | Error, Response> {
 	return () =>
-		fetch(input, init).then((res) =>
-			res.ok
-				? right<ServerError, Response>(res)
-				: left<ServerError, Response>(res),
-		);
+		fetch(input, init)
+			.then((res) =>
+				res.ok
+					? right<ServerError, Response>(res)
+					: left<ServerError, Response>(res),
+			)
+			.catch((e) => e);
 }
