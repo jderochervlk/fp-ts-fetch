@@ -3,8 +3,7 @@
  */
 
 import { left, right } from "fp-ts/lib/Either.js";
-import { type TaskEither, chainW, tryCatch } from "fp-ts/lib/TaskEither.js";
-import { pipe } from "fp-ts/lib/function.js";
+import type { TaskEither } from "fp-ts/lib/TaskEither.js";
 
 /**
  * @since 1.2.0
