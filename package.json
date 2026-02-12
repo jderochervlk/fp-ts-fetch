@@ -13,7 +13,7 @@
 	"scripts": {
 		"build": "vite build",
 		"docs": "docs-ts",
-		"format": "biome ",
+		"format": "npx @biomejs/biome format --write .",
 		"prepare": "husky install",
 		"test": "vitest run",
 		"test:watch": "vitest --ui",
